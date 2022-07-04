@@ -1,0 +1,30 @@
+﻿@model Proj3_Khan.Models.RegisterViewModel
+
+
+<!--it will display one heading and set the background color to provided color-->
+
+<h1 class="display-4">Pagal University</h1>
+<br>
+
+<!--it will display the summary of entered data-->
+<h3>Thank you for registering!</h3>
+<br>
+<h4><strong>Id: </strong>@Model.UserInfo.Id</h4>
+<h4><strong>Name: </strong>@Model.UserInfo.Name</h4>
+<h4><strong>Address: </strong>@Model.UserInfo.Address</h4>
+<h4><strong>City: </strong>@Model.UserInfo.City</h4>
+<h4><strong>State: </strong>@Model.UserInfo.State</h4>
+<h4><strong>Zip: </strong>@Model.UserInfo.Zip</h4>
+<h4><strong>Username: </strong>@Model.UserInfo.Username</h4>
+<h4><strong>Password: </strong>@Model.UserInfo.Password</h4>
+<h4><strong>Degree Program: </strong>@Model.UserInfo.DegreeProgram</h4>
+<h4><strong>Age: </strong>@Model.UserInfo.Age</h4>
+<h4><strong>Status: </strong>@Model.UserInfo.FirstTime</h4>
+<h4><strong>Notification: </strong>@Model.UserInfo.Notification</h4>
+<br>
+
+<h4><strong>Registered On: </strong>@Model.RegistrationDate.ToShortDateString()</h4>
+<h4><strong>Client Info: </strong>@Model.ClientInfo.</h4>
+
+
+

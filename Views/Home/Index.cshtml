@@ -1,0 +1,87 @@
+﻿@model Proj3_Khan.Models.RegisteredUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--it will display two headings and set the background color to provided color-->
+<div class="text-center">
+    <h1 class="display-4">Pagal University</h1>
+    <h4><u> Register to Pagal University </u></h4>
+</div>
+
+<!--it will display all the input fields for registration form-->
+<div class="row">
+    <div class="col-12">
+        <h3>Registration Form</h3>
+        <form asp-action="Submit" asp-controller="Home" method="post">
+            <table>
+                <tr>
+                    <td><label asp-for="Name"></label></td>
+                    <td><input type="text" asp-for="Name" /></td>
+                    <td><span asp-validation-for="Name" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Address"></label></td>
+                    <td><input type="text" asp-for="Address" /></td>
+                    <td><span asp-validation-for="Address" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="City"></label></td>
+                    <td><input type="text" asp-for="City" /></td>
+                    <td><span asp-validation-for="City" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="State"></label></td>
+                    <td><input type="text" asp-for="State" /></td>
+                    <td><span asp-validation-for="State" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Zip"></label></td>
+                    <td><input type="text" asp-for="Zip" /></td>
+                    <td><span asp-validation-for="Zip" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Username"></label></td>
+                    <td><input type="text" asp-for="Username" /></td>
+                    <td><span asp-validation-for="Username" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Password"></label></td>
+                    <td><input type="password" asp-for="Password" /></td>
+                    <td><span asp-validation-for="Password" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="ConfirmPassword"></label></td>
+                    <td><input type="password" asp-for="ConfirmPassword" /></td>
+                    <td><span asp-validation-for="ConfirmPassword" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <!--it will display a dropdown list for degree programs-->
+                    <td>Degree Program</td>
+                    <td><select asp-for="DegreeProgram" asp-items="ViewBag.DropDownOptions"></select></td>
+                </tr>
+                <tr>
+                    <!--it will display a text field to enter age from 18 to 100-->
+                    <td><label asp-for="Age"></label></td>
+                    <td><input type="text" asp-for="Age" /></td>
+                    <td><span asp-validation-for="Age" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <!--it will display a checkbox input field-->
+                    <td><label asp-for="FirstTime"></label></td>
+                    <td><input type="checkbox" value="true" asp-for="FirstTime" />Yes</td>
+                </tr>
+                <tr>
+                    <!--it will display a radiobutton input field-->
+                    <td><label asp-for="Notification"></label></td>
+                    <td><input type="radio" asp-for="Notification" value="Yes" />Yes</td>
+                    <td><input type="radio" asp-for="Notification" value="No" />No</td>
+                    <td><span asp-validation-for="Notification" class="text-danger"></span></td>
+                </tr>
+            </table>
+            <br>
+            <!--it will display a submit button-->
+            <input Type="Submit" value="Register" class="btn btn-success" />
+        </form>
+    </div>
+</div>
